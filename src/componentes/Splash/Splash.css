@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div-splash {
+  margin: 0;
+  background-image: url("../../assets/img/splash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  color: white;
+}
+
+.btn-inicio {
+  background-image: url("../../assets/img/botoninicio.png");
+  background-size: 100% 95%;
+  height: 12vh;
+  width: 280px;
+  background-color: transparent;
+  border: none;
+}

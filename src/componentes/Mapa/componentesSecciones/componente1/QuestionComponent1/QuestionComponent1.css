@@ -1,0 +1,143 @@
+.clase1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.clase2 {
+  height: 25vh;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.clase2 p {
+  background-color: white;
+  height: 20vh;
+  width: 50%;
+  text-align: justify;
+  z-index: 1;
+  padding: 5px;
+}
+
+.clase2 img {
+  width: 45%;
+  height: 250px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.clase3 {
+  color: #fff;
+  height: 10vh;
+  width: 80%;
+  border: none;
+  background-image: linear-gradient(
+    288deg,
+    rgba(0, 85, 255, 1) 1.5%,
+    rgba(4, 56, 115, 1) 91.6%
+  );
+  border-radius: 20px;
+  margin-top: 2vh;
+  font-size: 1.1rem;
+}
+
+.progreso {
+  width: 80%;
+  height: 2.5vh;
+  background-color: white;
+  margin-bottom: 2vh;
+  border-radius: 50px;
+}
+
+.congratulation {
+  height: 20vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.congratulation div {
+  background-color: white;
+  padding: 40px;
+  margin-top: -20px;
+  z-index: 1;
+  margin-bottom: 30vh;
+}
+
+.congratulation img {
+  width: 80%;
+  z-index: 999;
+}
+
+.btnPlay {
+  background-image: url("../../../../assets/img/botonplay.png");
+  background-size: 100% 95%;
+  height: 7vh;
+  width: 240px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.demon {
+  width: 100%;
+  height: 85vh;
+  margin: 0 auto;
+}
+
+.demon_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+
+.demon_info p {
+  background-color: white;
+  padding: 10px;
+  margin: 5vh auto;
+  width: 90%;
+}
+
+.contenedor-centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Ajusta según sea necesario */
+}
+
+.demon_codigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.demon_codigo img {
+  height: 12vh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.demon_codigo p {
+  background-color: white;
+  margin-bottom: 10px;
+  height: 3vh;
+  padding: 5px;
+}
+
+.demon_codigo input {
+  width: 100%;
+  height: 4vh;
+}
