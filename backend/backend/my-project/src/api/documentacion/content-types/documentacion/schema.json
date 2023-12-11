@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentacions",
+  "info": {
+    "singularName": "documentacion",
+    "pluralName": "documentacions",
+    "displayName": "documentacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text_documentation": {
+      "type": "text"
+    }
+  }
+}

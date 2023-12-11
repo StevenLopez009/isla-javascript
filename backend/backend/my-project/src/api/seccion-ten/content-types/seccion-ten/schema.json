@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seccion_tens",
+  "info": {
+    "singularName": "seccion-ten",
+    "pluralName": "seccion-tens",
+    "displayName": "Seccion_ten",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enunciado": {
+      "type": "string"
+    },
+    "opcion1": {
+      "type": "string"
+    },
+    "opcion2": {
+      "type": "string"
+    },
+    "opcion3": {
+      "type": "string"
+    },
+    "opcion4": {
+      "type": "string"
+    },
+    "informacion": {
+      "type": "text"
+    },
+    "opcion_correcta": {
+      "type": "integer"
+    },
+    "protect": {
+      "type": "text"
+    }
+  }
+}

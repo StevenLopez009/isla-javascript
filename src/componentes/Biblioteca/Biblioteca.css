@@ -73,3 +73,12 @@
 .next {
   right: 0;
 }
+
+.modal {
+  background-color: #fff;
+  height: 80vh;
+  width: 80%;
+  position: absolute;
+  top: 10vh;
+  left: 10%;
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preguntas",
+  "info": {
+    "singularName": "pregunta",
+    "pluralName": "preguntas",
+    "displayName": "seccion_one",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enunciado": {
+      "type": "text"
+    },
+    "opcion1": {
+      "type": "string"
+    },
+    "opcion2": {
+      "type": "string"
+    },
+    "opcion3": {
+      "type": "string"
+    },
+    "opcion4": {
+      "type": "string"
+    },
+    "informacion": {
+      "type": "text"
+    },
+    "opcion_correcta": {
+      "type": "integer"
+    },
+    "felicitacion": {
+      "type": "text"
+    },
+    "protect": {
+      "type": "string"
+    }
+  }
+}
