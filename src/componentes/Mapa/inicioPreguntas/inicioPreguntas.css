@@ -1,0 +1,97 @@
+.Start {
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.StartOne {
+  background-image: url("../../../assets/img/seccion1.jpg");
+}
+.StartTwo {
+  background-image: url("../../../assets/img/seccion2.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartThree {
+  background-image: url("../../../assets/img/seccion3.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartFour {
+  background-image: url("../../../assets/img/seccion4.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartFive {
+  background-image: url("../../../assets/img/seccion5.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartSix {
+  background-image: url("../../../assets/img/seccion6.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartSeven {
+  background-image: url("../../../assets/img/seccion7.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.StartEight {
+  background-image: url("../../../assets/img/seccion8.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartNine {
+  background-image: url("../../../assets/img/seccion9.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartTen {
+  background-image: url("../../../assets/img/seccion10.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartEleven {
+  background-image: url("../../../assets/img/seccion11.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartThirteen {
+  background-image: url("../../../assets/img/seccion13.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartFourteen {
+  background-image: url("../../../assets/img/seccion14.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.StartFifteen {
+  background-image: url("../../../assets/img/seccion15.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.StartSixteen {
+  background-image: url("../../../assets/img/seccion16.jpg");
+  background-position: center center;
+  background-size: cover;
+}

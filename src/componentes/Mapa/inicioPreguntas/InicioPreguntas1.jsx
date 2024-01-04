@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useQuestion } from "../../../context/ContextSections/ContextOne";
-import "./inicioPreguntas1.css";
+import "./inicioPreguntas.css";
 
 const InicioPreguntas1 = () => {
   const { fetchOne } = useQuestion();
@@ -9,7 +9,7 @@ const InicioPreguntas1 = () => {
   };
   return (
     <div className="Start StartOne">
-      <h2>Seccion 1 Introduccion</h2>
+      <h2>Llegada a la Isla</h2>
       <Link to={"/seccion1"}>
         <button className="btn-play" onClick={handleClick}></button>
       </Link>

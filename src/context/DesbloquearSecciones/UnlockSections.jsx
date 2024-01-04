@@ -4,20 +4,20 @@ const UnlockContext = createContext();
 
 const UnlockSections = ({ children }) => {
   const [visible, setVisible] = useState(true);
-  const [visibleSeccion3, setVisibleSeccion3] = useState(false);
-  const [visibleSeccion4, setVisibleSeccion4] = useState(false);
-  const [visibleSeccion5, setVisibleSeccion5] = useState(false);
-  const [visibleSeccion6, setVisibleSeccion6] = useState(false);
-  const [visibleSeccion7, setVisibleSeccion7] = useState(false);
-  const [visibleSeccion8, setVisibleSeccion8] = useState(false);
-  const [visibleSeccion9, setVisibleSeccion9] = useState(false);
-  const [visibleSeccion10, setVisibleSeccion10] = useState(false);
-  const [visibleSeccion11, setVisibleSeccion11] = useState(false);
-  const [visibleSeccion12, setVisibleSeccion12] = useState(false);
-  const [visibleSeccion13, setVisibleSeccion13] = useState(false);
-  const [visibleSeccion14, setVisibleSeccion14] = useState(false);
-  const [visibleSeccion15, setVisibleSeccion15] = useState(false);
-  const [visibleSeccion16, setVisibleSeccion16] = useState(false);
+  const [visibleSeccion3, setVisibleSeccion3] = useState(true);
+  const [visibleSeccion4, setVisibleSeccion4] = useState(true);
+  const [visibleSeccion5, setVisibleSeccion5] = useState(true);
+  const [visibleSeccion6, setVisibleSeccion6] = useState(true);
+  const [visibleSeccion7, setVisibleSeccion7] = useState(true);
+  const [visibleSeccion8, setVisibleSeccion8] = useState(true);
+  const [visibleSeccion9, setVisibleSeccion9] = useState(true);
+  const [visibleSeccion10, setVisibleSeccion10] = useState(true);
+  const [visibleSeccion11, setVisibleSeccion11] = useState(true);
+  const [visibleSeccion12, setVisibleSeccion12] = useState(true);
+  const [visibleSeccion13, setVisibleSeccion13] = useState(true);
+  const [visibleSeccion14, setVisibleSeccion14] = useState(true);
+  const [visibleSeccion15, setVisibleSeccion15] = useState(true);
+  const [visibleSeccion16, setVisibleSeccion16] = useState(true);
 
   const data = {
     visible,

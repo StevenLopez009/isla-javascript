@@ -42,7 +42,9 @@ const QuestionComponent1 = ({
               src={data[currentQuestion].attributes.protect}
               alt="protector uno"
             />
-            <p>{data[currentQuestion].attributes.enunciado}</p>
+            <p className="enunciado">
+              {data[currentQuestion].attributes.enunciado}
+            </p>
           </div>
           <button
             className="clase3"
@@ -108,8 +110,8 @@ const QuestionComponent1 = ({
           {!last && (
             <div className="demon_info">
               <p>
-                Soy Nihilus , primer protector del tesoro de la isla, has
-                completado la introduccion pero si no solucionas mi codigo
+                Soy Nihilus , primer protector del tesoro de la isla, veo que
+                has vencido a mis ayudantes, pero si no solucionas mi codigo
                 tomare todas tus vidas
               </p>
               <button

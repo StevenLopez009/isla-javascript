@@ -49,8 +49,61 @@
   background-color: yellow;
   margin: 1px;
   height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
+.item-1 {
+  background-image: url("../../assets/img/imagen11.jpg");
+}
+
+.item-2 {
+  background-image: url("../../assets/img/imagen2.jpg");
+}
+.item-3 {
+  background-image: url("../../assets/img/imagen5.jpg");
+}
+
+.item-4 {
+  background-image: url("../../assets/img/imagen4.jpg");
+}
+.item-5 {
+  background-image: url("../../assets/img/imagen3.jpg");
+}
+.item-6 {
+  background-image: url("../../assets/img/imagen6.jpg");
+}
+.item-7 {
+  background-image: url("../../assets/img/imagen7.jpg");
+}
+.item-8 {
+  background-image: url("../../assets/img/imagen8.jpg");
+}
+.item-9 {
+  background-image: url("../../assets/img/imagen9.jpg");
+}
+.item-10 {
+  background-image: url("../../assets/img/imagen10.jpg");
+}
+.item-11 {
+  background-image: url("../../assets/img/imagen1.jpg");
+}
+.item-12 {
+  background-image: url("../../assets/img/imagen12.jpg");
+}
+.item-13 {
+  background-image: url("../../assets/img/imagen13.jpg");
+}
+.item-14 {
+  background-image: url("../../assets/img/imagen14.jpg");
+}
+.item-15 {
+  background-image: url("../../assets/img/imagen15.jpg");
+}
+.item-16 {
+  background-image: url("../../assets/img/imagen16.jpg");
+}
 .prev,
 .next {
   cursor: pointer;
@@ -75,10 +128,47 @@
 }
 
 .modal {
-  background-color: #fff;
   height: 80vh;
   width: 80%;
   position: absolute;
   top: 10vh;
   left: 10%;
+  padding: 10px;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+.modal-0 {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+.modal-1 {
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+}
+
+.modal-2 {
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}
+
+.modal-3 {
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+}
+
+.modal-4 {
+  background-image: linear-gradient(
+    180.7deg,
+    rgba(0, 213, 255, 1) 2.5%,
+    rgba(79, 255, 255, 1) 97.7%
+  );
+}
+
+.modal-5 {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(100, 43, 115, 1) 0%,
+    rgba(4, 0, 4, 1) 90%
+  );
 }

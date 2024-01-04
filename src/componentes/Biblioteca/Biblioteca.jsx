@@ -57,10 +57,10 @@ const Biblioteca = () => {
             style={{ transform: `translateX(${-currentIndex * (100 / 3)}%)` }}
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
-              (item) => (
+              (item, index) => (
                 <div
                   key={item}
-                  className="carousel-item"
+                  className={`carousel-item item-${index + 1}`}
                   onClick={() => handleItemClick(item)}
                 >
                   {item}
@@ -75,7 +75,7 @@ const Biblioteca = () => {
             Next
           </button>
           {showModal && (
-            <div className="modal">
+            <div className={`modal modal-${currentIndex}`}>
               <div className="modal-content">
                 <span className="close" onClick={closeModal}>
                   &times;

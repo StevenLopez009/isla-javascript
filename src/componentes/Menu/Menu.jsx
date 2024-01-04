@@ -21,7 +21,7 @@ const Menu = () => {
         <div className="header_perfil"></div>
         <div className="header_info">
           <div className="header_info_vidas">
-            <h4>Nombre Jugador</h4>
+            <h4>Isla JavaScript</h4>
             <div className="header_Life">
               <h3>5</h3>
               <img src={lifeImage} alt="" />
