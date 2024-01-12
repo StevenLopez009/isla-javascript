@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useQuestion } from "../../../context/ContextSections/ContextOne";
+import { useQuestionOne } from "../../../context/ContextSections/ContextOne";
 import "./inicioPreguntas.css";
 
 const InicioPreguntas1 = () => {
-  const { fetchOne } = useQuestion();
+  const { fetchOne } = useQuestionOne();
   const handleClick = async () => {
     return await fetchOne();
   };

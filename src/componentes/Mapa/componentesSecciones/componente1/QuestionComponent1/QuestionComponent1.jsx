@@ -110,9 +110,10 @@ const QuestionComponent1 = ({
           {!last && (
             <div className="demon_info">
               <p>
-                Soy Nihilus , primer protector del tesoro de la isla, veo que
-                has vencido a mis ayudantes, pero si no solucionas mi codigo
-                tomare todas tus vidas
+                Soy Nihilus , primer protector de la isla, veo que has vencido a
+                mis ayudantes, pero si no solucionas mi código, tomaré todas tus
+                Vidas, tu reina a sido llevada al cementerio de las estructuras
+                de control, pero si no respondes bien, no puedo dejarte avanzar.
               </p>
               <button
                 className="btnPlay"

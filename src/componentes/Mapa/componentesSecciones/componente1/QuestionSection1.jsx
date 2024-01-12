@@ -1,10 +1,10 @@
 import { useState } from "react";
 import PasarSeccion from "../../PasarSeccion/PasarSeccion";
-import { useQuestion } from "../../../../context/ContextSections/ContextOne";
+import { useQuestionOne } from "../../../../context/ContextSections/ContextOne";
 import QuestionComponent1 from "./QuestionComponent1/QuestionComponent1";
 
 const QuestionSection1 = ({ decrement }) => {
-  const { data1 } = useQuestion();
+  const { data1 } = useQuestionOne();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showQuestion, setShowQuestion] = useState(false);
   const [showCorrection, setShowCorrection] = useState(false);

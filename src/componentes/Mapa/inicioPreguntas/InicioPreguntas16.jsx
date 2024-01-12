@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { useQuestion } from "../../../context/ContextSections/ContextOne";
+import { useQuestionSixteen } from "../../../context/ContextSections/ContextOne";
 import "./inicioPreguntas.css";
 
 const InicioPreguntas16 = () => {
-  const { fetchOne } = useQuestion();
+  const { fetchSixteen } = useQuestionSixteen();
   const handleClick = async () => {
-    return await fetchOne();
+    return await fetchSixteen();
   };
   return (
     <div className="Start StartSixteen">
       <h2>Optimizacion</h2>
-      <Link to={"/seccion2"}>
+      <Link to={"/seccion16"}>
         <button className="btn-play btnThree" onClick={handleClick}></button>
       </Link>
     </div>

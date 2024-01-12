@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { useQuestion } from "../../../context/ContextSections/ContextOne";
+import { useQuestionTwelve } from "../../../context/ContextSections/ContextOne";
 import "./inicioPreguntas.css";
 
 const InicioPreguntas12 = () => {
-  const { fetchOne } = useQuestion();
+  const { fetchTwelve } = useQuestionTwelve();
   const handleClick = async () => {
-    return await fetchOne();
+    return await fetchTwelve();
   };
   return (
-    <div className="Start ">
-      <h2>------</h2>
-      <Link to={"/seccion2"}>
+    <div className="Start StartTwelve">
+      <h2>Armas y Herramientas</h2>
+      <Link to={"/seccion12"}>
         <button className="btn-play btnThree" onClick={handleClick}></button>
       </Link>
     </div>

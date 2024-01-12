@@ -1029,10 +1029,10 @@ export interface ApiSeccionSevenSeccionSeven extends Schema.CollectionType {
     opcion1: Attribute.String;
     opcion2: Attribute.String;
     opcion3: Attribute.String;
-    opcion4: Attribute.String;
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    opcion4: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

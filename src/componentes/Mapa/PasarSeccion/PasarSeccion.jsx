@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useQuestion } from "../../../context/ContextSections/ContextOne";
-import { useEffect } from "react";
 
 const PasarSeccion = () => {
   return (

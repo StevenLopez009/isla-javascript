@@ -1,16 +1,72 @@
-.one_life {
-  background-image: url("../../../../assets/img/seccion1.jpg");
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-}
-.two_Life {
-  background-image: url("../../../../assets/img/seccion2.jpg");
+.componente_principal {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+
+.one_life {
+  background-image: url("../../../../assets/img/seccion1.jpg");
+}
+.two_Life {
+  background-image: url("../../../../assets/img/seccion2.jpg");
+}
+
+.three_Life {
+  background-image: url("../../../../assets/img/seccion3.jpg");
+}
+
+.four_Life {
+  background-image: url("../../../../assets/img/seccion4.jpg");
+}
+
+.five_Life {
+  background-image: url("../../../../assets/img/seccion5.jpg");
+}
+
+.six_Life {
+  background-image: url("../../../../assets/img/seccion6.jpg");
+}
+
+.seven_Life {
+  background-image: url("../../../../assets/img/seccion7.jpg");
+}
+
+.eight_Life {
+  background-image: url("../../../../assets/img/seccion8.jpg");
+}
+
+.nine_Life {
+  background-image: url("../../../../assets/img/seccion9.jpg");
+}
+
+.ten_Life {
+  background-image: url("../../../../assets/img/seccion10.jpg");
+}
+
+.eleven_Life {
+  background-image: url("../../../../assets/img/seccion11.jpg");
+}
+
+.twelve_Life {
+  background-image: url("../../../../assets/img/seccion12.jpg");
+}
+
+.thirteen_Life {
+  background-image: url("../../../../assets/img/seccion13.jpg");
+}
+
+.fourteen_Life {
+  background-image: url("../../../../assets/img/seccion14.jpg");
+}
+
+.fifteen_Life {
+  background-image: url("../../../../assets/img/seccion15.jpg");
+}
+
+.sixteen_Life {
+  background-image: url("../../../../assets/img/seccion16.jpg");
 }
 
 /*Vidas componente*/

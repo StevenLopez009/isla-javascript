@@ -73,6 +73,12 @@
   background-size: cover;
 }
 
+.StartTwelve {
+  background-image: url("../../../assets/img/seccion12.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
 .StartThirteen {
   background-image: url("../../../assets/img/seccion13.jpg");
   background-position: center center;

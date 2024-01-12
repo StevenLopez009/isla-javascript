@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import victoryImage from "../../../../../assets/img/victory.gif";
 import correctionImage from "../../../../../assets/img/defeat.gif";
-import demon1 from "../../../../../assets/img/demon1.gif";
-import codigo1 from "../../../../../assets/img/codigo1.jpg";
+import demonTwo from "../../../../../assets/img/demon2.gif";
+import codigo2 from "../../../../../assets/img/codigo2.png";
 import { useState } from "react";
 import "./QuestionComponent1.css";
 
@@ -26,7 +26,7 @@ const QuestionComponent2 = ({
   };
 
   const handleButtonClick = () => {
-    if (inputValue === "//") {
+    if (inputValue === "2 4 6 8 10") {
       setFinal(true);
     } else {
       return;
@@ -107,13 +107,12 @@ const QuestionComponent2 = ({
 
       {reachedEnd && (
         <div className="demon">
-          <img src={demon1} alt="" />
+          <img src={demonTwo} alt="" />
           {!last && (
             <div className="demon_info">
               <p>
-                Soy Nihilus , primer protector del tesoro de la isla, veo que
-                has vencido a mis ayudantes, pero si no solucionas mi codigo
-                tomare todas tus vidas
+                Has ayudado a mis demonios en su trabajo , pero si no respondes
+                bien te quedaras en mi cementerio para siempre
               </p>
               <button
                 className="btnPlay"
@@ -125,8 +124,8 @@ const QuestionComponent2 = ({
             <>
               <div className="contenedor_centrado">
                 <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
+                  <p>¿Ques se muestra en este console.log?</p>
+                  <img src={codigo2} alt="" />
                   <input
                     type="text"
                     value={inputValue}

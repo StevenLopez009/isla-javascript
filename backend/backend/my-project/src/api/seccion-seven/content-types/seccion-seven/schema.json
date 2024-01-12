@@ -24,9 +24,6 @@
     "opcion3": {
       "type": "string"
     },
-    "opcion4": {
-      "type": "string"
-    },
     "informacion": {
       "type": "text"
     },
@@ -35,6 +32,9 @@
     },
     "protect": {
       "type": "text"
+    },
+    "opcion4": {
+      "type": "string"
     }
   }
 }
