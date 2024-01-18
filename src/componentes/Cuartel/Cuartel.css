@@ -1,0 +1,52 @@
+.container-principal {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("../../assets/img/Cuartel.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 0px;
+}
+
+.container-secundario {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/img/fondocuartel.jpg");
+  object-fit: contain;
+  background-position: center center;
+}
+
+.container-hero {
+  padding-top: 5vh;
+  text-align: center;
+}
+
+.container-hero img {
+  object-fit: contain;
+  height: 60vh;
+  width: 80%;
+}
+
+.container-info {
+  width: 95%;
+  height: 30vh;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.container-info-one {
+  background-color: yellow;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-info-one img {
+  object-fit: contain;
+  width: 100px;
+}

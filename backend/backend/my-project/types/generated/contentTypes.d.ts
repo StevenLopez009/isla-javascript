@@ -728,6 +728,7 @@ export interface ApiPreguntaPregunta extends Schema.CollectionType {
     opcion_correcta: Attribute.Integer;
     felicitacion: Attribute.Text;
     protect: Attribute.String;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -766,6 +767,7 @@ export interface ApiSeccionEightSeccionEight extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -804,6 +806,7 @@ export interface ApiSeccionElevenSeccionEleven extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -842,6 +845,7 @@ export interface ApiSeccionFitteenSeccionFitteen extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -880,6 +884,7 @@ export interface ApiSeccionFiveSeccionFive extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -918,6 +923,7 @@ export interface ApiSeccionFourSeccionFour extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -957,6 +963,7 @@ export interface ApiSeccionFourteenSeccionFourteen
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -995,6 +1002,7 @@ export interface ApiSeccionNineSeccionNine extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1033,6 +1041,7 @@ export interface ApiSeccionSevenSeccionSeven extends Schema.CollectionType {
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
     opcion4: Attribute.String;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1071,6 +1080,7 @@ export interface ApiSeccionSixSeccionSix extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1109,6 +1119,7 @@ export interface ApiSeccionSixteenSeccionSixteen extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1147,6 +1158,7 @@ export interface ApiSeccionTenSeccionTen extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1186,6 +1198,7 @@ export interface ApiSeccionThirteenSeccionThirteen
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1224,6 +1237,7 @@ export interface ApiSeccionThreeSeccionThree extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1262,6 +1276,7 @@ export interface ApiSeccionTwelveSeccionTwelve extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1300,6 +1315,7 @@ export interface ApiSecciontwoSecciontwo extends Schema.CollectionType {
     informacion: Attribute.Text;
     opcion_correcta: Attribute.Integer;
     protect: Attribute.Text;
+    imgCorrection: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

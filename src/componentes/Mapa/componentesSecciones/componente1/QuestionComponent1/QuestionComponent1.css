@@ -334,6 +334,34 @@
   z-index: 999;
 }
 
+.container-correction {
+  height: 90vh;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.container-correction p {
+  padding: 10px;
+  background-color: #fff;
+  text-align: justify;
+}
+
+.img-calavera {
+  height: 20vh;
+  width: 90%;
+  object-fit: cover;
+}
+
+.info-correction {
+  height: 40vh;
+  width: 100%;
+  object-fit: contain;
+}
+
 .btnPlay {
   background-image: url("../../../../../assets/img/botonplay.png");
   background-size: 100% 95%;

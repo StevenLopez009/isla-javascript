@@ -55,6 +55,8 @@ import ContenedorVidas13 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/
 import ContenedorVidas14 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas14";
 import ContenedorVidas15 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas15";
 import ContenedorVidas16 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas16";
+import Taberna from "./componentes/Taberna/Taberna";
+import Cuartel from "./componentes/Cuartel/Cuartel";
 
 function App() {
   return (
@@ -93,6 +95,14 @@ function App() {
                                             <Route
                                               path="/Mapa"
                                               element={<Mapa />}
+                                            />
+                                            <Route
+                                              path="/Taberna"
+                                              element={<Taberna />}
+                                            />
+                                            <Route
+                                              path="/Cuartel"
+                                              element={<Cuartel />}
                                             />
                                             <Route
                                               path="/Preguntas1"

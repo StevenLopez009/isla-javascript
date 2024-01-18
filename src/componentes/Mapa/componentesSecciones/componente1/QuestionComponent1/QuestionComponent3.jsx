@@ -83,11 +83,14 @@ const QuestionComponent3 = ({
       )}
 
       {showCorrection && (
-        <div className="congratulation">
-          <img src={correctionImage} alt="" />
-          <div>
-            <p>{data[currentQuestion].attributes.informacion}</p>
-          </div>
+        <div className="container-correction">
+          <img src={correctionImage} alt="" className="img-calavera" />
+          <p>{data[currentQuestion].attributes.informacion}</p>
+          <img
+            className="info-correction"
+            src={[data[currentQuestion].attributes.imgCorrection]}
+            alt=""
+          />
           <Link>
             <button className="btnPlay" onClick={handleContinueClick}></button>
           </Link>
@@ -112,7 +115,9 @@ const QuestionComponent3 = ({
             <div className="demon_info">
               <p>
                 Soy Vulkaroth tercer protector del tesoro, protector de fuego y
-                funciones espero que tengas suficientes vidas para ofrecerme
+                funciones espero que tengas suficientes vidas para ofrecerme, si
+                deseas saber de tu princesa los orcos la raptaron llevandola por
+                la ciudadela de los objetos
               </p>
               <button
                 className="btnPlay"
@@ -124,7 +129,7 @@ const QuestionComponent3 = ({
             <>
               <div className="contenedor_centrado">
                 <div className="demon_codigo">
-                  <p>Crea la declaracion de esta funcion</p>
+                  <p>Crea la Invocacion de esta funcion</p>
                   <img src={codigo3} alt="" />
                   <input
                     type="text"

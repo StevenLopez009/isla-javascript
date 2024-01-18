@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Biblioteca.css";
 
 const Biblioteca = () => {
@@ -54,7 +54,7 @@ const Biblioteca = () => {
         <div className="contenedor-carrusel">
           <div
             className="carousel-wrapper"
-            style={{ transform: `translateX(${-currentIndex * (100 / 3)}%)` }}
+            style={{ transform: `translateX(${-currentIndex * (100 / 1)}%)` }}
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
               (item, index) => (

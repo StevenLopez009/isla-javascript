@@ -83,11 +83,14 @@ const QuestionComponent12 = ({
       )}
 
       {showCorrection && (
-        <div className="congratulation">
+        <div className="container-correction">
           <img src={correctionImage} alt="" />
-          <div>
-            <p>{data[currentQuestion].attributes.informacion}</p>
-          </div>
+          <p>{data[currentQuestion].attributes.informacion}</p>
+          <img
+            className="info-correction"
+            src={[data[currentQuestion].attributes.imgCorrection]}
+            alt=""
+          />
           <Link>
             <button className="btnPlay" onClick={handleContinueClick}></button>
           </Link>

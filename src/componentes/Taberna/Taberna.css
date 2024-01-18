@@ -1,0 +1,48 @@
+.container-principal-taberna {
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("../../assets/img/fondotaberna.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 0px;
+  color: white;
+}
+
+.contenedor-secundario-taberna {
+  background-image: url("../../assets/img/fondotaberna.jpg");
+  background-position: center center;
+  height: 100vh;
+}
+
+.contenedor-perfil {
+  width: 90%;
+  margin: 0 auto;
+  height: 35vh;
+}
+
+.contenedor-premios {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.premio {
+  margin-top: 40px;
+  background-color: rgba(3, 3, 3, 0.763);
+  height: 20vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.premio img {
+  height: 100%;
+}

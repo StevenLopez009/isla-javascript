@@ -38,6 +38,9 @@
     },
     "protect": {
       "type": "string"
+    },
+    "imgCorrection": {
+      "type": "text"
     }
   }
 }

@@ -35,6 +35,9 @@
     },
     "protect": {
       "type": "text"
+    },
+    "imgCorrection": {
+      "type": "text"
     }
   }
 }

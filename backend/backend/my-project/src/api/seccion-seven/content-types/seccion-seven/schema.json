@@ -35,6 +35,9 @@
     },
     "opcion4": {
       "type": "string"
+    },
+    "imgCorrection": {
+      "type": "text"
     }
   }
 }

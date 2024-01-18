@@ -4,10 +4,13 @@ import imagenHeroe from "../../assets/img/heroe.png";
 import audio from "../../assets/audio/audio.mp3";
 import useSound from "use-sound";
 import "./Menu.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Menu = () => {
-  const [ver, setVer] = useState(true);
+  const [ver, setVer] = useState(() => {
+    const storedValue = localStorage.getItem("ver");
+    return storedValue ? JSON.parse(storedValue) : true;
+  });
   const [playSound] = useSound(audio);
 
   const handleContinuar = () => {
@@ -15,6 +18,11 @@ const Menu = () => {
       setVer(false);
     }, 500);
   };
+
+  useEffect(() => {
+    localStorage.setItem("ver", JSON.stringify(ver));
+  }, [ver]);
+
   return (
     <>
       <header className="header">
@@ -71,15 +79,15 @@ const Menu = () => {
         <Link to="/Biblioteca" className="btn btn_one">
           <div className="btn-text"> BIBLIOTECA</div>
         </Link>
-        <button className="btn btn_two">
+        <Link to="/Cuartel" className="btn btn_two">
           <div className="btn-text">CUARTEL</div>
-        </button>
+        </Link>
         <Link to="/Mapa" className="btn btn_three">
           <div className="btn-text">MAPA</div>
         </Link>
-        <button className="btn btn_four">
+        <Link to="/Taberna" className="btn btn_four">
           <div className="btn-text">TABERNA</div>
-        </button>
+        </Link>
       </footer>
     </>
   );
