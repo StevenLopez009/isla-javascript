@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import lifeImage from "../../assets/img/life.png";
 import imagenHeroe from "../../assets/img/heroe.png";
 import audio from "../../assets/audio/audio.mp3";
+import music from "../../assets/audio/music.mp3";
 import useSound from "use-sound";
 import "./Menu.css";
 import { useEffect, useState } from "react";
@@ -12,6 +13,18 @@ const Menu = () => {
     return storedValue ? JSON.parse(storedValue) : true;
   });
   const [playSound] = useSound(audio);
+  const [playMusic, { stop }] = useSound(music, { volume: 0.5 });
+  const [musicPlaying, setMusicPlaying] = useState(false);
+
+  const handleMusicClick = () => {
+    if (!musicPlaying) {
+      playMusic();
+      setMusicPlaying(true);
+    } else {
+      stop();
+      setMusicPlaying(false);
+    }
+  };
 
   const handleContinuar = () => {
     setTimeout(() => {
@@ -43,6 +56,9 @@ const Menu = () => {
       </header>
       <main className="main">
         <div className="contenedor-botones">
+          <button onClick={handleMusicClick} className="boton btn-music">
+            <span className="material-symbols-outlined">music_note</span>
+          </button>
           <Link to="/Biblioteca">
             <button className="boton btn-biblioteca">BIBLIOTECA</button>
           </Link>
@@ -59,8 +75,8 @@ const Menu = () => {
         <div className={`contenedor-heroe ${ver ? "" : "oculto"}`}>
           <div className="texto-heroe">
             <p>
-              Hola jugador bienvenido <br />a islajavascript ,si deseas
-              conseguir el tesoro <br /> que reposa en la isla <br />
+              Hola jugador bienvenido <br />a islajavascript , nuestra reina a
+              desaparecido debemos sarpar y buscarla <br />
               necesitaras buenos conocimientos , <br /> visita la biblioteca
               <br />
               para aprender , visita <br />

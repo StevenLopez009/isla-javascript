@@ -5,18 +5,20 @@ import demonThree from "../../../../../assets/img/demon3.gif";
 import codigo3 from "../../../../../assets/img/codigo3.png";
 import { useState } from "react";
 import "./QuestionComponent1.css";
+import useComponent from "../../../hooks/useComponent";
 
-const QuestionComponent3 = ({
-  data,
-  currentQuestion,
-  showQuestion,
-  showCorrection,
-  showCongratulation,
-  reachedEnd,
-  validateResponse,
-  handleContinueClick,
-  PasarSeccion,
-}) => {
+const QuestionComponent3 = ({ data, PasarSeccion }) => {
+  const {
+    currentQuestion,
+    showQuestion,
+    showCorrection,
+    showCongratulation,
+    reachedEnd,
+    validateResponse,
+    handleContinueClick,
+    decrementLife,
+  } = useComponent();
+
   const [last, setLast] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);

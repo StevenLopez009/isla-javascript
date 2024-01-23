@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Splash from "./componentes/Splash/Splash";
 import Menu from "./componentes/Menu/Menu";
 import { UnlockSections } from "./context/DesbloquearSecciones/UnlockSections";
-import Mapa from "./componentes/Mapa/Mapa";
 import InicioPreguntas1 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas1";
 import {
   QuestionProviderEight,
@@ -57,6 +56,7 @@ import ContenedorVidas15 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/
 import ContenedorVidas16 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas16";
 import Taberna from "./componentes/Taberna/Taberna";
 import Cuartel from "./componentes/Cuartel/Cuartel";
+import IntroMapa from "./componentes/Mapa/IntroMapa";
 
 function App() {
   return (
@@ -94,7 +94,7 @@ function App() {
                                             />
                                             <Route
                                               path="/Mapa"
-                                              element={<Mapa />}
+                                              element={<IntroMapa />}
                                             />
                                             <Route
                                               path="/Taberna"

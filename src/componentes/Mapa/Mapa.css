@@ -7,3 +7,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.intro-mapa {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 0px;
+  color: white;
+  background-image: url("../../assets/img/seccion16.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}

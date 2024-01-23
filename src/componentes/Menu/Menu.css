@@ -143,6 +143,7 @@ progress::after {
 }
 
 /*botones*/
+
 .contenedor-botones {
   position: absolute;
   height: 80vh;
@@ -233,6 +234,16 @@ progress::after {
   bottom: 10vh;
   left: 24vh;
 }
+
+.btn-music {
+  position: absolute;
+  left: 33vh;
+  top: 10vh;
+  height: 4vh;
+  width: 50px;
+  padding: 0;
+}
+
 .footer {
   height: 10vh;
   width: 100%;
