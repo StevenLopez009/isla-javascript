@@ -3,7 +3,7 @@ import victoryImage from "../../../../../assets/img/victory.gif";
 import correctionImage from "../../../../../assets/img/defeat.gif";
 import demon15 from "../../../../../assets/img/demon15.gif";
 import codigo1 from "../../../../../assets/img/codigo1.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./QuestionComponent1.css";
 import useComponent from "../../../hooks/useComponent";
 
@@ -16,11 +16,14 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
     reachedEnd,
     validateResponse,
     handleContinueClick,
-    decrementLife,
+    vida,
+    handleCorrectionClick,
   } = useComponent();
+
   const [last, setLast] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
+  const [timer, setTimer] = useState(30);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -34,11 +37,32 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
     }
   };
 
+  useEffect(() => {
+    setTimer(30);
+  }, [currentQuestion]);
+
+  useEffect(() => {
+    const countdown = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+    return () => clearInterval(countdown);
+  }, [currentQuestion]);
+
+  useEffect(() => {
+    if (timer === 0) {
+      handleCorrectionClick();
+    }
+  }, [timer, PasarSeccion]);
+
   return (
     <>
       {!showQuestion && (
         <div className="clase1">
-          <div className="progreso"></div>
+          <div className="progreso">
+            <p>
+              Tiempo: {timer} Vidas: {vida}
+            </p>
+          </div>
           <div className="clase2 clase-colors15">
             <img
               src={data[currentQuestion].attributes.protect}

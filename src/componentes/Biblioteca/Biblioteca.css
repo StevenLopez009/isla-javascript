@@ -26,161 +26,71 @@
   margin-bottom: 40px;
 }
 
-.contenedor-carrusel {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+.container {
   background-image: url("../../assets/img/biblioteca-fondo.jpg");
+  height: 100vh;
 }
-
-.carousel-wrapper {
+.container-slider {
+  width: 100%;
+  height: 100%;
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  padding-top: 30vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-.carousel-item {
-  flex: 0 0 calc(100% / 1);
-  max-width: calc(100% / 1);
-  box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
-  background-color: yellow;
-  margin: 1px;
-  height: 30vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: transparent;
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 20vh;
 }
-
-.item-1 {
-  background-image: url("../../assets/img/imagen11.jpg");
-}
-
-.item-2 {
-  background-image: url("../../assets/img/imagen2.jpg");
-}
-.item-3 {
-  background-image: url("../../assets/img/imagen5.jpg");
-}
-
-.item-4 {
-  background-image: url("../../assets/img/imagen4.jpg");
-}
-.item-5 {
-  background-image: url("../../assets/img/imagen3.jpg");
-}
-.item-6 {
-  background-image: url("../../assets/img/imagen6.jpg");
-}
-.item-7 {
-  background-image: url("../../assets/img/imagen7.jpg");
-}
-.item-8 {
-  background-image: url("../../assets/img/imagen8.jpg");
-}
-.item-9 {
-  background-image: url("../../assets/img/imagen9.jpg");
-}
-.item-10 {
-  background-image: url("../../assets/img/imagen10.jpg");
-}
-.item-11 {
-  background-image: url("../../assets/img/imagen1.jpg");
-}
-.item-12 {
-  background-image: url("../../assets/img/imagen12.jpg");
-}
-.item-13 {
-  background-image: url("../../assets/img/imagen13.jpg");
-}
-.item-14 {
-  background-image: url("../../assets/img/imagen14.jpg");
-}
-.item-15 {
-  background-image: url("../../assets/img/imagen15.jpg");
-}
-.item-16 {
-  background-image: url("../../assets/img/imagen16.jpg");
-}
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: 20vh;
-  font-size: 18px;
-  padding: 10px;
-  color: white;
-  background-color: #333;
-  border: none;
-  outline: none;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
+.card img {
+  height: 50vh;
 }
 
 .modal {
-  height: 80vh;
-  width: 80%;
-  position: absolute;
-  top: 10vh;
-  left: 10%;
-  padding: 10px;
-  text-align: left;
-  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-0 {
-  background-image: url("../../assets/img/libro1.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: justify;
+.modal-content {
+  background-color: #fefefe;
   padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: justify;
 }
 
-.modal-0 p {
-  background-color: #08aeea;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 8vh;
-  color: black;
-}
-.modal-1 {
-  background-color: #85ffbd;
-  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+/* Estilos para el botón de cerrar el modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #aaa;
 }
 
-.modal-2 {
-  background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+.close:hover {
+  color: #555;
 }
 
-.modal-3 {
-  background-color: #08aeea;
-  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
-}
-
-.modal-4 {
-  background-image: linear-gradient(
-    180.7deg,
-    rgba(0, 213, 255, 1) 2.5%,
-    rgba(79, 255, 255, 1) 97.7%
-  );
-}
-
-.modal-5 {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(100, 43, 115, 1) 0%,
-    rgba(4, 0, 4, 1) 90%
-  );
+.card h4 {
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px 0px;
 }

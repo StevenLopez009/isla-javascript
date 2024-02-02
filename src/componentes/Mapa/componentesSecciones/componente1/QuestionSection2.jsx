@@ -2,7 +2,7 @@ import PasarSeccion from "../../PasarSeccion/PasarSeccion";
 import { useQuestionTwo } from "../../../../context/ContextSections/ContextOne";
 import QuestionComponent2 from "./QuestionComponent1/QuestionComponent2";
 
-const QuestionSection2 = ({ decrement }) => {
+const QuestionSection2 = () => {
   const { data2 } = useQuestionTwo();
 
   return (

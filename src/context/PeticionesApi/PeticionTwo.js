@@ -14,6 +14,8 @@ const fetchData = async (url) => {
 
 const baseUrl = "http://localhost:1337/api/seccion";
 
+export const getQuestionsOne = () =>
+  fetchData(`http://localhost:1337/api/preguntas`);
 export const getQuestionsTwo = () => fetchData(`${baseUrl}twos`);
 export const getQuestionsThree = () => fetchData(`${baseUrl}-threes`);
 export const getQuestionsFour = () => fetchData(`${baseUrl}-fours`);

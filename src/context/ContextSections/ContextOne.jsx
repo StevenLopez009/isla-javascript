@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
-import { getQuestions } from "../PeticionesApi/PeticionOne";
 import {
+  getQuestionsOne,
   getQuestionsFour,
   getQuestionsThree,
   getQuestionsTwo,
@@ -27,7 +27,7 @@ const QuestionProviderOne = ({ children }) => {
 
   const fetchOne = async () => {
     try {
-      const { data } = await getQuestions();
+      const { data } = await getQuestionsOne();
       setData1([...data]);
     } catch {
       return false;

@@ -51,12 +51,15 @@ const useComponent = () => {
   };
 
   return {
+    vida,
+    setVida,
     currentQuestion,
     showQuestion,
     showCorrection,
     showCongratulation,
     reachedEnd,
     validateResponse,
+    handleCorrectionClick,
     handleContinueClick,
     decrementLife,
   };
