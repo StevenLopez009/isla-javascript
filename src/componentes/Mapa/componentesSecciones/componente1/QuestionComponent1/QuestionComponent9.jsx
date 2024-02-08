@@ -23,6 +23,7 @@ const QuestionComponent9 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -31,6 +32,7 @@ const QuestionComponent9 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -136,7 +138,7 @@ const QuestionComponent9 = ({ data, PasarSeccion }) => {
           <img src={demon9} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo-nine">
                 Soy Xólotl, guardiana del asincronismo espero que tengas
                 suficientes vidas para mi, tu reina la llevaron los orcos
                 navegando hacia los errores de JavaScript
@@ -149,21 +151,23 @@ const QuestionComponent9 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p>Necesito comentar el console.log que me faltaria</p>
+                    <img src={codigo1} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

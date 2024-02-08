@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import victoryImage from "../../../../../assets/img/victory.gif";
 import correctionImage from "../../../../../assets/img/defeat.gif";
 import demon4 from "../../../../../assets/img/demon4.gif";
-import codigo1 from "../../../../../assets/img/codigo1.jpg";
+import codigo4 from "../../../../../assets/img/codigo4.jpeg";
 import { useEffect, useState } from "react";
 import "./QuestionComponent1.css";
 import useComponent from "../../../hooks/useComponent";
@@ -24,14 +24,16 @@ const QuestionComponent4 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleButtonClick = () => {
-    if (inputValue === "//") {
+    if (inputValue === "producto.precio") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -139,9 +141,11 @@ const QuestionComponent4 = ({ data, PasarSeccion }) => {
           <img src={demon4} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo dialogo-four">
                 Soy Astrid, quieres rescatar a tu dulce reina estas muy lejos
-                aun, dame tus vidas y olvidala
+                aun, dame tus vidas y olvidala, la reina fue vendida a un
+                comprador por un buen precio si resuelves mi codigo podras ir al
+                castillo de los arreglos es a donde la llevaron
               </p>
               <button
                 className="btnPlay"
@@ -151,21 +155,25 @@ const QuestionComponent4 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p className="dialogo-four-last">
+                      Como puedo acceder al valor de esta Posima
+                    </p>
+                    <img src={codigo4} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

@@ -1,0 +1,23 @@
+.pasar-seccion-container {
+  background-color: #0056b3; /* Color de fondo */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+}
+
+.pasar-seccion-title {
+  font-size: 24px;
+  color: #fefdfd;
+  margin-bottom: 15px;
+}
+
+.pasar-seccion-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  text-decoration: none;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}

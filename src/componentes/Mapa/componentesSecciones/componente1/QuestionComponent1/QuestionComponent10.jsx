@@ -23,6 +23,7 @@ const QuestionComponent10 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -31,6 +32,7 @@ const QuestionComponent10 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -137,7 +139,7 @@ const QuestionComponent10 = ({ data, PasarSeccion }) => {
           <img src={demon10} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo-ten">
                 Soy Nokthor, protector del pantano de los errores, la
                 información que tengo vale tus vidas o la solución de mi código.
                 A cambio, te dire que tu reina fue llevada al desierto del
@@ -151,21 +153,23 @@ const QuestionComponent10 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p>Necesito comentar el console.log que me faltaria</p>
+                    <img src={codigo1} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

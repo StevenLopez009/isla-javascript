@@ -24,6 +24,7 @@ const QuestionComponent1 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -32,6 +33,7 @@ const QuestionComponent1 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -139,11 +141,11 @@ const QuestionComponent1 = ({ data, PasarSeccion }) => {
           <img src={demon1} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo dialogo-one">
                 Soy Nihilus , primer protector de la isla, veo que has vencido a
                 mis ayudantes, pero si no solucionas mi código, tomaré todas tus
-                Vidas, tu reina a sido llevada al cementerio de las estructuras
-                de control, pero si no respondes bien, no puedo dejarte avanzar.
+                Vidas, tu reina Elfa cruzo este valle con sus subditos estaba en busqueda de 
+                algo muy valioso
               </p>
               <button
                 className="btnPlay"
@@ -153,21 +155,25 @@ const QuestionComponent1 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p className="dialogo-one-last">
+                      Necesito comentar el console.log que me faltaria
+                    </p>
+                    <img src={codigo1} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

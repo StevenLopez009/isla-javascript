@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import esferaFour from "../../../../assets/img/lifecuatro.png";
+import esferaFour from "../../../../assets/img/lifetwo.png";
 
 const Seccion4 = () => {
   return (

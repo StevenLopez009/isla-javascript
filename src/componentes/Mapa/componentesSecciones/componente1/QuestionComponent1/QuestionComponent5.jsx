@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import victoryImage from "../../../../../assets/img/victory.gif";
 import correctionImage from "../../../../../assets/img/defeat.gif";
-import demon1 from "../../../../../assets/img/demon1.gif";
-import codigo1 from "../../../../../assets/img/codigo1.jpg";
+import demon5 from "../../../../../assets/img/demon5.1.gif";
+import codigo5 from "../../../../../assets/img/codigo5.jpeg";
 import { useEffect, useState } from "react";
 import "./QuestionComponent1.css";
 import useComponent from "../../../hooks/useComponent";
@@ -24,14 +24,16 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleButtonClick = () => {
-    if (inputValue === "//") {
+    if (inputValue === 'criaturas.push("Hada")') {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -135,13 +137,15 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
 
       {reachedEnd && (
         <div className="demon">
-          <img src={demon1} alt="" />
+          <img src={demon5} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
-                Te vuelvo a ver esta vez no será tan fácil, si quieres una pista
-                de tu reina los orcos la llevaron hacia las tierras del DOM
-                lugar donde habita un golem
+              <p className="dialogo dialogo-five">
+                Hola viajero has llegado hasta mi castillo de arreglos acambio
+                de tus vidas te dire que tu reina fue comprada por uno de mis
+                generales los Elfos son muy buenos con la magia de JavaScript
+                desconozco que pretende hacer con tu reina Elfa, fue llevada a
+                las tierras del Golem DOM
               </p>
               <button
                 className="btnPlay"
@@ -151,21 +155,25 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p className="dialogo-five-last">
+                      Necesito agregar "Hada" al final de mi arreglo
+                    </p>
+                    <img src={codigo5} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

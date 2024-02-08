@@ -23,6 +23,7 @@ const QuestionComponent6 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -31,6 +32,7 @@ const QuestionComponent6 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -137,11 +139,10 @@ const QuestionComponent6 = ({ data, PasarSeccion }) => {
           <img src={demon6} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
-                Soy Gravex, Golem del Dom , tu reina fue traída por los orcos y
-                llevada a los portales de las peticiones Fetch, ahora deberás
-                pagarme por esta información resolviendo el problema o dándome
-                tus vidas
+              <p className="dialogo-six">
+                Soy Gravex, Golem del Dom , tu reina fue traída por un Orco muy
+                poderoso soluciono mi codigo y continuo su camino  pretende llevar tu reina Elfa muy
+                lejos a travez de los portales Fetch , deberas darte prisa
               </p>
               <button
                 className="btnPlay"
@@ -151,21 +152,23 @@ const QuestionComponent6 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p>Necesito comentar el console.log que me faltaria</p>
+                    <img src={codigo1} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

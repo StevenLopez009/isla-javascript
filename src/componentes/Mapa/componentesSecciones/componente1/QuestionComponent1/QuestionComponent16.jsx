@@ -24,6 +24,7 @@ const QuestionComponent16 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -32,6 +33,7 @@ const QuestionComponent16 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }

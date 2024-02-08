@@ -24,6 +24,7 @@ const QuestionComponent3 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -32,6 +33,7 @@ const QuestionComponent3 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "saludar()") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -138,11 +140,12 @@ const QuestionComponent3 = ({ data, PasarSeccion }) => {
           <img src={demonThree} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
-                Soy Vulkaroth tercer protector del tesoro, protector de fuego y
-                funciones espero que tengas suficientes vidas para ofrecerme, si
-                deseas saber de tu princesa los orcos la raptaron llevandola por
-                la ciudadela de los objetos
+              <p className="dialogo dialogo-three">
+                Soy Vulkaroth protector de fuego y funciones espero que tengas
+                suficientes vidas para ofrecerme, los subditos de la reina
+                sufrieron una envozcada poco antes de llegar aqui desconozco
+                quienes raptaron a la reina , pero venderan las pertenencias de
+                la reina en la ciudadela de los objetos
               </p>
               <button
                 className="btnPlay"
@@ -152,21 +155,25 @@ const QuestionComponent3 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Crea la Invocacion de esta funcion</p>
-                  <img src={codigo3} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p className="dialogo-three-last">
+                      Crea la Invocacion de esta funcion
+                    </p>
+                    <img src={codigo3} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

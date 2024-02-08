@@ -24,6 +24,7 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -32,6 +33,7 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
   const handleButtonClick = () => {
     if (inputValue === "//") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -138,7 +140,7 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
           <img src={demon15} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo-twelve">
                 Soy Nihilus , primer protector del tesoro de la isla, veo que
                 has vencido a mis ayudantes, pero si no solucionas mi codigo
                 tomare todas tus vidas
@@ -151,21 +153,23 @@ const QuestionComponent15 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>Necesito comentar el console.log que me faltaria</p>
-                  <img src={codigo1} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p>Necesito comentar el console.log que me faltaria</p>
+                    <img src={codigo1} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}

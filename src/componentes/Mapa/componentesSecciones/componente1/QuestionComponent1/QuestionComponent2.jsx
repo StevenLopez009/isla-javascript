@@ -24,14 +24,16 @@ const QuestionComponent2 = ({ data, PasarSeccion }) => {
   const [inputValue, setInputValue] = useState("");
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [showContenedor, setShowContenedor] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleButtonClick = () => {
-    if (inputValue === "2 4 6 8 10") {
+    if (inputValue === "2,4,6,8,10") {
       setFinal(true);
+      setShowContenedor(false);
     } else {
       return;
     }
@@ -139,9 +141,11 @@ const QuestionComponent2 = ({ data, PasarSeccion }) => {
           <img src={demonTwo} alt="" />
           {!last && (
             <div className="demon_info">
-              <p>
+              <p className="dialogo dialogo-two">
                 Has ayudado a mis demonios en su trabajo , pero si no respondes
-                bien te quedaras en mi cementerio para siempre
+                bien te quedaras en mi cementerio para siempre, La reina Elfa
+                cruzo por este cementerio llevaba a sus subditos hacia las tierras del fuego 
+                y las funciones
               </p>
               <button
                 className="btnPlay"
@@ -151,21 +155,26 @@ const QuestionComponent2 = ({ data, PasarSeccion }) => {
           )}
           {last && (
             <>
-              <div className="contenedor_centrado">
-                <div className="demon_codigo">
-                  <p>¿Ques se muestra en este console.log?</p>
-                  <img src={codigo2} alt="" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
+              {showContenedor && (
+                <div className="contenedor_centrado">
+                  <div className="demon_codigo">
+                    <p className="dialogo-two-last">
+                      ¿Ques se muestra en este console.log?, no olvides las
+                      comas
+                    </p>
+                    <img src={codigo2} alt="" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <button
+                    className="btnPlay"
+                    onClick={handleButtonClick}
+                  ></button>
                 </div>
-                <button
-                  className="btnPlay"
-                  onClick={handleButtonClick}
-                ></button>
-              </div>
+              )}
             </>
           )}
           {final && <PasarSeccion />}
