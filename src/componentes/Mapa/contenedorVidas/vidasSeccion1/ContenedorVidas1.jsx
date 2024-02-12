@@ -5,6 +5,7 @@ import useComponent from "../../hooks/useComponent";
 
 const ContenedorVidas = () => {
   const { vida } = useComponent();
+  console.log("Valor de vida:", vida);
 
   return (
     <div className="componente_principal one_life">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuestionOne } from "../../../context/ContextSections/ContextOne";
 
 const vidaInicial = 5;
@@ -10,10 +10,22 @@ const useComponent = () => {
   const [showCorrection, setShowCorrection] = useState(false);
   const [showCongratulation, setShowCongratulation] = useState(false);
   const [reachedEnd, setReachedEnd] = useState(false);
-  const [vida, setVida] = useState(vidaInicial);
+  const [vida, setVida] = useState(() => {
+    const savedVida = localStorage.getItem("vida");
+    return savedVida ? parseInt(savedVida, 10) : vidaInicial;
+  });
+
+  useEffect(() => {
+    const resetVida = () => {
+      setVida(vidaInicial);
+      localStorage.setItem("vida", vidaInicial.toString());
+    };
+    const timeoutId = setTimeout(resetVida, 2 * 60 * 1000);
+    return () => clearTimeout(timeoutId);
+  }, [setVida]);
 
   const decrementLife = () => {
-    setVida(vida - 1);
+    setVida((prevVida) => prevVida - 1);
   };
 
   const handleCorrectionClick = () => {
@@ -50,7 +62,12 @@ const useComponent = () => {
     }
   };
 
+  useEffect(() => {
+    localStorage.setItem("vida", vida.toString());
+  }, [vida]);
+
   return {
+    vidaInicial,
     vida,
     setVida,
     currentQuestion,
@@ -61,7 +78,6 @@ const useComponent = () => {
     validateResponse,
     handleCorrectionClick,
     handleContinueClick,
-    decrementLife,
   };
 };
 

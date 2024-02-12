@@ -94,10 +94,10 @@
 }
 
 .clase-colors10 p {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(0, 152, 155, 1) 0.1%,
-    rgba(0, 94, 120, 1) 94.2%
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(61, 131, 97, 1) 11.2%,
+    rgba(28, 103, 88, 1) 91.1%
   );
 }
 
@@ -240,10 +240,10 @@
 }
 
 .clase10-btn {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(0, 152, 155, 1) 0.1%,
-    rgba(0, 94, 120, 1) 94.2%
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(61, 131, 97, 1) 11.2%,
+    rgba(28, 103, 88, 1) 91.1%
   );
 }
 
@@ -335,7 +335,7 @@
 }
 
 .container-correction {
-  height: 90vh;
+  height: 85vh;
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -343,21 +343,18 @@
   justify-content: space-around;
   text-align: center;
 }
-
+.gif-defeat {
+  height: 25vh;
+  object-fit: contain;
+}
 .container-correction p {
   padding: 10px;
   background-color: #fff;
   text-align: justify;
 }
 
-.img-calavera {
-  height: 20vh;
-  width: 90%;
-  object-fit: cover;
-}
-
 .info-correction {
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   object-fit: contain;
 }
@@ -379,10 +376,11 @@
   margin: 0 auto;
 }
 
-.demon img {
-  height: 50vh;
+.demon-gif {
+  height: 55%;
   width: 100%;
   object-fit: contain;
+  margin-top: -5vh;
 }
 
 .demon_info {
@@ -405,7 +403,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
 }
 
 .demon_codigo {
@@ -413,21 +411,22 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 15px;
-  box-sizing: border-box;
 }
 
 .demon_codigo img {
-  height: 20vh;
   width: 100%;
-  object-fit: contain;
+}
+
+.demon_codigo p {
+  background-color: #fff;
 }
 
 .demon_codigo input {
-  width: 100%;
+  width: 90%;
   height: 4vh;
   background-color: rgb(26, 25, 25);
   color: white;
+  margin-top: 10px;
 }
 
 .dialogo {
@@ -525,4 +524,140 @@
   font-family: sans-serif;
   height: 5vh;
   width: 90%;
+}
+
+.dialogo-six {
+  background-image: linear-gradient(
+    97.3deg,
+    rgba(155, 65, 25, 0.72) 39.5%,
+    rgba(155, 65, 25, 0.72) 39.5%,
+    rgba(60, 255, 0, 0.81) 69.7%
+  );
+}
+
+.dialogo-six-last {
+  background-image: linear-gradient(
+    97.3deg,
+    rgba(155, 65, 25, 0.72) 39.5%,
+    rgba(155, 65, 25, 0.72) 39.5%,
+    rgba(60, 255, 0, 0.81) 69.7%
+  );
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  height: 5vh;
+  width: 90%;
+}
+
+.dialogo-seven {
+  background-image: linear-gradient(
+    180deg,
+    rgba(155, 254, 23, 1) 45.5%,
+    rgba(36, 243, 8, 1) 97.9%
+  );
+  color: black;
+}
+
+.dialogo-seven-last {
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  height: 5vh;
+  width: 90%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(155, 254, 23, 1) 45.5%,
+    rgba(36, 243, 8, 1) 97.9%
+  );
+}
+
+.dialogo-nine {
+  background-image: linear-gradient(
+    129.1deg,
+    rgba(243, 199, 83, 1) 26.8%,
+    rgba(18, 235, 207, 1) 114.1%
+  );
+  color: black;
+}
+
+.dialogo-nine-last {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  height: 5vh;
+  width: 90%;
+  background-image: linear-gradient(
+    129.1deg,
+    rgba(243, 199, 83, 1) 26.8%,
+    rgba(18, 235, 207, 1) 114.1%
+  );
+  color: black;
+}
+
+.dialogo-ten {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(61, 131, 97, 1) 11.2%,
+    rgba(28, 103, 88, 1) 91.1%
+  );
+  color: #fff;
+}
+
+.dialogo-ten-last {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(61, 131, 97, 1) 11.2%,
+    rgba(28, 103, 88, 1) 91.1%
+  );
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  height: 5vh;
+  width: 90%;
+}
+
+.dialogo-eleven {
+  background-image: radial-gradient(
+    circle 957px at 8.7% 50.5%,
+    rgba(246, 191, 13, 1) 0%,
+    rgba(249, 47, 47, 1) 90%
+  );
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+.dialogo-twelve {
+  background-image: radial-gradient(
+    circle 759px at -6.7% 50%,
+    rgba(80, 131, 73, 1) 0%,
+    rgba(140, 209, 131, 1) 26.2%,
+    rgba(178, 231, 170, 1) 50.6%,
+    rgba(144, 213, 135, 1) 74.1%,
+    rgba(75, 118, 69, 1) 100.3%
+  );
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+.dialogo-thirteen {
+  background-image: radial-gradient(
+    circle farthest-corner at 17.1% 22.8%,
+    rgba(226, 24, 24, 1) 0%,
+    rgba(160, 6, 6, 1) 90%
+  );
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+.dialogo-fouteen {
+  background-image: radial-gradient(
+    circle 300px at 8% 89.3%,
+    rgba(20, 157, 208, 1) 0%,
+    rgba(140, 63, 226, 1) 90%
+  );
+  color: black;
+  font-size: 1.1rem;
+  font-family: sans-serif;
 }
