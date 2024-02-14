@@ -32,7 +32,6 @@ import InicioPreguntas7 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas
 import InicioPreguntas8 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas8";
 import InicioPreguntas9 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas9";
 import InicioPreguntas10 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas10";
-import InicioPreguntas12 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas12";
 import InicioPreguntas13 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas13";
 import InicioPreguntas14 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas14";
 import InicioPreguntas15 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas15";
@@ -57,6 +56,7 @@ import Cuartel from "./componentes/Cuartel/Cuartel";
 import IntroMapa from "./componentes/Mapa/IntroMapa";
 import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas4";
 import InicioPreguntas11 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas11";
+import InicioPreguntas12 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas12";
 
 function App() {
   return (
