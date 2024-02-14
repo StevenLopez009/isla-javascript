@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuestionOne } from "../../../context/ContextSections/ContextOne";
 
-const vidaInicial = 5;
+const vidaInicial = 20;
 
 const useComponent = () => {
   const { data1 } = useQuestionOne();
