@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Splash from "./componentes/Splash/Splash";
 import Menu from "./componentes/Menu/Menu";
 import { UnlockSections } from "./context/DesbloquearSecciones/UnlockSections";
-import InicioPreguntas1 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas1";
+import InicioPreguntas1 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas1.jsx";
 import {
   QuestionProviderEight,
   QuestionProviderEleven,
@@ -24,14 +24,14 @@ import {
 } from "./context/ContextSections/ContextOne";
 import ContenedorVidas from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas1";
 import Biblioteca from "./componentes/Biblioteca/Biblioteca";
-import InicioPreguntas2 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas2";
-import InicioPreguntas3 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas3";
-import InicioPreguntas5 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas5";
-import InicioPreguntas6 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas6";
-import InicioPreguntas7 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas7";
-import InicioPreguntas8 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas8";
-import InicioPreguntas9 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas9";
-import InicioPreguntas10 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas10";
+import InicioPreguntas2 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas2.jsx";
+import InicioPreguntas3 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas3.jsx";
+import InicioPreguntas5 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas5.jsx";
+import InicioPreguntas6 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas6.jsx";
+import InicioPreguntas7 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas7.jsx";
+import InicioPreguntas8 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas8.jsx";
+import InicioPreguntas9 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas9.jsx";
+import InicioPreguntas10 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas10.jsx";
 
 import ContenedorVidas2 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas2";
 import ContenedorVidas3 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas3";
@@ -51,13 +51,13 @@ import ContenedorVidas16 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/
 import Taberna from "./componentes/Taberna/Taberna";
 import Cuartel from "./componentes/Cuartel/Cuartel";
 import IntroMapa from "./componentes/Mapa/IntroMapa";
-import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas4";
-import InicioPreguntas11 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas11";
-import InicioPreguntas12 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas12";
-import InicioPreguntas13 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas13";
-import InicioPreguntas14 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas14";
-import InicioPreguntas15 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas15";
-import InicioPreguntas16 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas16";
+import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas4.jsx";
+import InicioPreguntas11 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas11.jsx";
+import InicioPreguntas12 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas12.jsx";
+import InicioPreguntas13 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas13.jsx";
+import InicioPreguntas14 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas14.jsx";
+import InicioPreguntas15 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas15.jsx";
+import InicioPreguntas16 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas16.jsx";
 
 function App() {
   return (
