@@ -32,10 +32,7 @@ import InicioPreguntas7 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas
 import InicioPreguntas8 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas8";
 import InicioPreguntas9 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas9";
 import InicioPreguntas10 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas10";
-import InicioPreguntas13 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas13";
-import InicioPreguntas14 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas14";
-import InicioPreguntas15 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas15";
-import InicioPreguntas16 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas16";
+
 import ContenedorVidas2 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas2";
 import ContenedorVidas3 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas3";
 import ContenedorVidas4 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/ContenedorVidas4";
@@ -57,6 +54,10 @@ import IntroMapa from "./componentes/Mapa/IntroMapa";
 import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas4";
 import InicioPreguntas11 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas11";
 import InicioPreguntas12 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas12";
+import InicioPreguntas13 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas13";
+import InicioPreguntas14 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas14";
+import InicioPreguntas15 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas15";
+import InicioPreguntas16 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas16";
 
 function App() {
   return (
