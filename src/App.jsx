@@ -61,7 +61,7 @@ import InicioPreguntas16 from "./componentes/Mapa/inicioPreguntas/InicioPregunta
 
 function App() {
   return (
-    <>
+    <div style={{ maxWidth: "590px", margin: "0 auto" }}>
       <UnlockSections>
         <QuestionProviderOne>
           <QuestionProviderTwo>
@@ -252,7 +252,7 @@ function App() {
           </QuestionProviderTwo>
         </QuestionProviderOne>
       </UnlockSections>
-    </>
+    </div>
   );
 }
 
