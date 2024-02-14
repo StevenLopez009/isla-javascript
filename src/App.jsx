@@ -26,7 +26,7 @@ import ContenedorVidas from "./componentes/Mapa/contenedorVidas/vidasSeccion1/Co
 import Biblioteca from "./componentes/Biblioteca/Biblioteca";
 import InicioPreguntas2 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas2";
 import InicioPreguntas3 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas3";
-import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/inicioPreguntas4";
+
 import InicioPreguntas5 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas5";
 import InicioPreguntas6 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas6";
 import InicioPreguntas7 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas7";
@@ -57,6 +57,7 @@ import ContenedorVidas16 from "./componentes/Mapa/contenedorVidas/vidasSeccion1/
 import Taberna from "./componentes/Taberna/Taberna";
 import Cuartel from "./componentes/Cuartel/Cuartel";
 import IntroMapa from "./componentes/Mapa/IntroMapa";
+import InicioPreguntas4 from "./componentes/Mapa/inicioPreguntas/InicioPreguntas4";
 
 function App() {
   return (
