@@ -1,0 +1,17 @@
+export { default as Seccion } from "./Seccion";
+export { default as Seccion1 } from "./Seccion1";
+export { default as Seccion10 } from "./Seccion10";
+export { default as Seccion11 } from "./Seccion11";
+export { default as Seccion12 } from "./Seccion12";
+export { default as Seccion13 } from "./Seccion13";
+export { default as Seccion14 } from "./Seccion14";
+export { default as Seccion15 } from "./Seccion15";
+export { default as Seccion16 } from "./Seccion16";
+export { default as Seccion2 } from "./Seccion2";
+export { default as Seccion3 } from "./Seccion3";
+export { default as Seccion4 } from "./Seccion4";
+export { default as Seccion5 } from "./Seccion5";
+export { default as Seccion6 } from "./Seccion6";
+export { default as Seccion7 } from "./Seccion7";
+export { default as Seccion8 } from "./Seccion8";
+export { default as Seccion9 } from "./Seccion9";
