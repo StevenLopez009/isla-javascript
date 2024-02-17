@@ -301,15 +301,51 @@
   color: black;
 }
 .progreso {
-  width: 80%;
+  width: 90%;
   height: 3.5vh;
-  background-color: white;
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.progreso-div-live {
+  background-image: linear-gradient(
+    288deg,
+    rgba(0, 85, 255, 1) 1.5%,
+    rgba(4, 56, 115, 1) 91.6%
+  );
+  color: #fff;
+  position: absolute;
+  right: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40%;
+}
+.progreso-div-time {
+  background-image: linear-gradient(
+    288deg,
+    rgba(0, 85, 255, 1) 1.5%,
+    rgba(4, 56, 115, 1) 91.6%
+  );
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.reloj {
+  height: 15vh;
+  z-index: 100;
+}
+.calavera {
+  height: 15vh;
+  z-index: 100;
 }
 
 .congratulation {
@@ -660,4 +696,39 @@
   color: black;
   font-size: 1.1rem;
   font-family: sans-serif;
+}
+
+.contenedor-death {
+  min-height: 100vh;
+  margin-top: -10vh;
+  display: flex;
+  align-items: end;
+  padding: 20px;
+}
+
+.contenedor-death-mensage {
+  height: 25vh;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10vh;
+}
+
+.contenedor-death-mensage img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contenedor-death-mensage {
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.contenedor-tiempo {
+  background-color: #020202;
+  padding: 20px;
+  border-radius: 15px;
 }

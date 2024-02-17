@@ -6,6 +6,9 @@ import codigo13 from "../../../../../assets/img/codigo13.jpg";
 import { useEffect, useState } from "react";
 import "./QuestionComponent1.css";
 import useComponent from "../../../hooks/useComponent";
+import calavera from "../../../../../assets/img/calavera.png";
+import reloj from "../../../../../assets/img/reloj.png";
+import vela from "../../../../../assets/img/deathimg.png";
 
 const QuestionComponent13 = ({ data, PasarSeccion }) => {
   const {
@@ -26,6 +29,8 @@ const QuestionComponent13 = ({ data, PasarSeccion }) => {
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
   const [showContenedor, setShowContenedor] = useState(true);
+  const tiempoInicial = 20 * 60; // 20 minutos en segundos
+  const [segundos, setSegundos] = useState(tiempoInicial);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -66,143 +71,163 @@ const QuestionComponent13 = ({ data, PasarSeccion }) => {
     }
   }, [setVida]);
 
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setSegundos((segundos) => segundos - 1);
+    }, 1000);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
+  const minutos = Math.floor(segundos / 60);
+  const segundosRestantes = segundos % 60;
+
   return (
     <>
-      {vida >
-        0(
-          <>
-            {!showQuestion && (
-              <div className="clase1">
-                <div className="progreso">
-                  <p>
-                    Tiempo: {timer} Vidas: {vida}
-                  </p>
-                </div>
-                <div className="clase2 clase-colors13">
-                  <img
-                    src={data[currentQuestion].attributes.protect}
-                    alt="protector uno"
-                  />
-                  <p className="enunciado">
-                    {data[currentQuestion].attributes.enunciado}
-                  </p>
-                </div>
-                <button
-                  className="clase3 clase13-btn"
-                  onClick={() =>
-                    validateResponse(data[currentQuestion].attributes, 1)
-                  }
-                >
-                  {data[currentQuestion].attributes.opcion1}
-                </button>
-                <button
-                  className="clase3 clase13-btn"
-                  onClick={() =>
-                    validateResponse(data[currentQuestion].attributes, 2)
-                  }
-                >
-                  {data[currentQuestion].attributes.opcion2}
-                </button>
-                <button
-                  className="clase3 clase13-btn"
-                  onClick={() =>
-                    validateResponse(data[currentQuestion].attributes, 3)
-                  }
-                >
-                  {data[currentQuestion].attributes.opcion3}
-                </button>
-                <button
-                  className="clase3 clase13-btn"
-                  onClick={() =>
-                    validateResponse(data[currentQuestion].attributes, 4)
-                  }
-                >
-                  {data[currentQuestion].attributes.opcion4}
-                </button>
+      {vida > 0 && (
+        <>
+          {!showQuestion && (
+            <div className="clase1">
+              <div className="progreso">
+                <img src={reloj} alt="" className="reloj" />
+                <div className="progreso-div-time">{timer}</div>
+                <div className="progreso-div-live"> {vida}</div>
+                <img src={calavera} className="calavera" alt="" />
               </div>
-            )}
-
-            {showCorrection && (
-              <div className="container-correction">
-                <img src={correctionImage} alt="" className="gif-defeat" />
-                <p>{data[currentQuestion].attributes.informacion}</p>
+              <div className="clase2 clase-colors13">
                 <img
-                  className="info-correction"
-                  src={[data[currentQuestion].attributes.imgCorrection]}
-                  alt=""
+                  src={data[currentQuestion].attributes.protect}
+                  alt="protector uno"
                 />
-                <Link>
-                  <button
-                    className="btnPlay"
-                    onClick={handleContinueClick}
-                  ></button>
-                </Link>
+                <p className="enunciado">
+                  {data[currentQuestion].attributes.enunciado}
+                </p>
               </div>
-            )}
-            {showCongratulation && (
-              <div className="congratulation">
-                <img src={victoryImage} alt="" />
-                <div>
-                  <p>Felicidades has respondido bien</p>
-                </div>
-                <Link>
-                  <button
-                    className="btnPlay"
-                    onClick={handleContinueClick}
-                  ></button>
-                </Link>
-              </div>
-            )}
+              <button
+                className="clase3 clase13-btn"
+                onClick={() =>
+                  validateResponse(data[currentQuestion].attributes, 1)
+                }
+              >
+                {data[currentQuestion].attributes.opcion1}
+              </button>
+              <button
+                className="clase3 clase13-btn"
+                onClick={() =>
+                  validateResponse(data[currentQuestion].attributes, 2)
+                }
+              >
+                {data[currentQuestion].attributes.opcion2}
+              </button>
+              <button
+                className="clase3 clase13-btn"
+                onClick={() =>
+                  validateResponse(data[currentQuestion].attributes, 3)
+                }
+              >
+                {data[currentQuestion].attributes.opcion3}
+              </button>
+              <button
+                className="clase3 clase13-btn"
+                onClick={() =>
+                  validateResponse(data[currentQuestion].attributes, 4)
+                }
+              >
+                {data[currentQuestion].attributes.opcion4}
+              </button>
+            </div>
+          )}
 
-            {reachedEnd && (
-              <div className="demon">
-                <img src={demon13} alt="" className="demon-gif" />
-                {!last && (
-                  <div className="demon_info">
-                    <p className="dialogo dialogo-thirteen">
-                      Soy Nihilus , primer protector del tesoro de la isla, veo
-                      que has vencido a mis ayudantes, pero si no solucionas mi
-                      codigo tomare todas tus vidas
-                    </p>
-                    <button
-                      className="btnPlay"
-                      onClick={() => setLast(true)}
-                    ></button>
-                  </div>
-                )}
-                {last && (
-                  <>
-                    {showContenedor && (
-                      <div className="contenedor_centrado">
-                        <div className="demon_codigo">
-                          <p className="dialogo-thirteen">
-                            ¿Cual es este framework de JavaScript ?
-                          </p>
-                          <img src={codigo13} alt="" />
-                          <input
-                            type="text"
-                            value={inputValue}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                        <button
-                          className="btnPlay"
-                          onClick={handleButtonClick}
-                        ></button>
+          {showCorrection && (
+            <div className="container-correction">
+              <img src={correctionImage} alt="" className="gif-defeat" />
+              <p>{data[currentQuestion].attributes.informacion}</p>
+              <img
+                className="info-correction"
+                src={[data[currentQuestion].attributes.imgCorrection]}
+                alt=""
+              />
+              <Link>
+                <button
+                  className="btnPlay"
+                  onClick={handleContinueClick}
+                ></button>
+              </Link>
+            </div>
+          )}
+          {showCongratulation && (
+            <div className="congratulation">
+              <img src={victoryImage} alt="" />
+              <div>
+                <p>Felicidades has respondido bien</p>
+              </div>
+              <Link>
+                <button
+                  className="btnPlay"
+                  onClick={handleContinueClick}
+                ></button>
+              </Link>
+            </div>
+          )}
+
+          {reachedEnd && (
+            <div className="demon">
+              <img src={demon13} alt="" className="demon-gif" />
+              {!last && (
+                <div className="demon_info">
+                  <p className="dialogo dialogo-thirteen">
+                    Soy Nihilus , primer protector del tesoro de la isla, veo
+                    que has vencido a mis ayudantes, pero si no solucionas mi
+                    codigo tomare todas tus vidas
+                  </p>
+                  <button
+                    className="btnPlay"
+                    onClick={() => setLast(true)}
+                  ></button>
+                </div>
+              )}
+              {last && (
+                <>
+                  {showContenedor && (
+                    <div className="contenedor_centrado">
+                      <div className="demon_codigo">
+                        <p className="dialogo-thirteen">
+                          ¿Cual es este framework de JavaScript ?
+                        </p>
+                        <img src={codigo13} alt="" />
+                        <input
+                          type="text"
+                          value={inputValue}
+                          onChange={handleInputChange}
+                        />
                       </div>
-                    )}
-                  </>
-                )}
-                {final && <PasarSeccion />}
-              </div>
-            )}
-            {vida <= 0 && (
-              <div className="vida-cero">
-                <h2>¡Tus vidas se han agotado!</h2>
-              </div>
-            )}
-          </>
-        )}
+                      <button
+                        className="btnPlay"
+                        onClick={handleButtonClick}
+                      ></button>
+                    </div>
+                  )}
+                </>
+              )}
+              {final && <PasarSeccion />}
+            </div>
+          )}
+        </>
+      )}
+      {vida <= 0 && (
+        <div className="contenedor-death">
+          <div className="contenedor-death-mensage">
+            <div>
+              <img src={vela} alt="" />
+            </div>
+            <div className="contenedor-tiempo">
+              <p>¡Tus vidas se han agotado!</p>
+              Deberas esperar: {minutos}:{segundosRestantes < 10 ? "0" : ""}
+              {segundosRestantes} para que regrese tus vidas
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

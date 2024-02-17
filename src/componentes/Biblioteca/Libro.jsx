@@ -1,13 +1,14 @@
 import "./Biblioteca.css";
 
-const Libro = ({ url, titulo, openModal, index }) => {
+const Libro = ({ url, titulo, openModal, index, buttonIndex }) => {
   return (
     <div className="card">
       <img src={url} alt="" />
       <h4>{titulo}</h4>
-      <button className="button one two" onClick={() => openModal(index)}>
-        Leer
-      </button>
+      <button
+        className={`Boton${buttonIndex} button-read`}
+        onClick={() => openModal(index)}
+      ></button>
     </div>
   );
 };

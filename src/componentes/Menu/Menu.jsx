@@ -75,14 +75,13 @@ const Menu = () => {
         <div className={`contenedor-heroe ${ver ? "" : "oculto"}`}>
           <div className="texto-heroe">
             <p>
-              Hola jugador bienvenido <br />a islajavascript , nuestra reina a
-              desaparecido debemos sarpar y buscarla <br />
-              necesitaras buenos conocimientos , <br /> visita la biblioteca
+              Hola jugador <br /> bienvenido, <br /> visita la biblioteca
               <br />
-              para aprender , visita <br />
+              para aprender visita <br />
               el cuartel para <br />
-              escoger tu personaje , <br /> visita la taberna <br /> para mirar
-              tus logros y compartirlos con <br /> tus amigos , cuando <br />
+              desbloquear los personaje <br /> visita la taberna <br /> para
+              mirar tus logros y compartirlos con <br /> tus amigos , cuando
+              <br />
               estes listo sarpa <br /> a la aventura desde <br /> el mapa
             </p>
             <button onClick={handleContinuar}>Continuar</button>

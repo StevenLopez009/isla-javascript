@@ -6,6 +6,9 @@ import codigo5 from "../../../../../assets/img/codigo5.jpeg";
 import { useEffect, useState } from "react";
 import "./QuestionComponent1.css";
 import useComponent from "../../../hooks/useComponent";
+import calavera from "../../../../../assets/img/calavera.png";
+import reloj from "../../../../../assets/img/reloj.png";
+import vela from "../../../../../assets/img/deathimg.png";
 
 const QuestionComponent5 = ({ data, PasarSeccion }) => {
   const {
@@ -26,6 +29,8 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
   const [final, setFinal] = useState(false);
   const [timer, setTimer] = useState(30);
   const [showContenedor, setShowContenedor] = useState(true);
+  const tiempoInicial = 20 * 60; // 20 minutos en segundos
+  const [segundos, setSegundos] = useState(tiempoInicial);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -66,6 +71,17 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
     }
   }, [setVida]);
 
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setSegundos((segundos) => segundos - 1);
+    }, 1000);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
+  const minutos = Math.floor(segundos / 60);
+  const segundosRestantes = segundos % 60;
+
   return (
     <>
       {vida > 0 && (
@@ -73,9 +89,10 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
           {!showQuestion && (
             <div className="clase1">
               <div className="progreso">
-                <p>
-                  Tiempo: {timer} Vidas: {vida}
-                </p>
+                <img src={reloj} alt="" className="reloj" />
+                <div className="progreso-div-time">{timer}</div>
+                <div className="progreso-div-live"> {vida}</div>
+                <img src={calavera} className="calavera" alt="" />
               </div>
               <div className="clase2 clase-colors5">
                 <img
@@ -197,12 +214,21 @@ const QuestionComponent5 = ({ data, PasarSeccion }) => {
               {final && <PasarSeccion />}
             </div>
           )}
-          {vida <= 0 && (
-            <div className="vida-cero">
-              <h2>¡Tus vidas se han agotado!</h2>
-            </div>
-          )}
         </>
+      )}
+      {vida <= 0 && (
+        <div className="contenedor-death">
+          <div className="contenedor-death-mensage">
+            <div>
+              <img src={vela} alt="" />
+            </div>
+            <div className="contenedor-tiempo">
+              <p>¡Tus vidas se han agotado!</p>
+              Deberas esperar: {minutos}:{segundosRestantes < 10 ? "0" : ""}
+              {segundosRestantes} para que regrese tus vidas
+            </div>
+          </div>
+        </div>
       )}
     </>
   );

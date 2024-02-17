@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuestionOne } from "../../../context/ContextSections/ContextOne";
 
-const vidaInicial = 20;
+const vidaInicial = 5;
 
 const useComponent = () => {
   const { data1 } = useQuestionOne();
@@ -20,7 +20,7 @@ const useComponent = () => {
       setVida(vidaInicial);
       localStorage.setItem("vida", vidaInicial.toString());
     };
-    const timeoutId = setTimeout(resetVida, 2 * 60 * 1000);
+    const timeoutId = setTimeout(resetVida, 20 * 60 * 1000);
     return () => clearTimeout(timeoutId);
   }, [setVida]);
 

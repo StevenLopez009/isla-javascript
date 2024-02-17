@@ -114,3 +114,35 @@
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
+
+.button-read {
+  background-size: 100% 95%;
+  height: 9vh;
+  width: 240px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 40px;
+}
+.Boton0,
+.Boton3,
+.Boton6,
+.Boton8,
+.Boton9 {
+  background-image: url("../../assets/img/botoninicio.png");
+}
+.Boton1,
+.Boton2,
+.Boton12,
+.Boton5,
+.Boton10,
+.Boton11,
+.Boton14,
+.Boton15 {
+  background-image: url("../../assets/img/botonred.png");
+}
+
+.Boton4,
+.Boton7,
+.Boton13 {
+  background-image: url("../../assets/img/botonplay.png");
+}
